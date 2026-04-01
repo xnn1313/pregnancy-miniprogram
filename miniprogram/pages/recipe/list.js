@@ -14,7 +14,11 @@ Page({
 
   loadRecipes(trimester) {
     let url = app.globalData.baseUrl + '/recipes/list'
-    if (trimester) url += '?trimester=' + trimester
+    
+    // 只有 1/2/3 才是有效的 trimester 值
+    if (trimester && trimester > 0) {
+      url += '?trimester=' + trimester
+    }
     
     wx.request({
       url: url,
@@ -39,7 +43,8 @@ Page({
   filter(e) {
     const tab = e.currentTarget.dataset.tab
     this.setData({ activeTab: tab })
-    this.loadRecipes(tab || null)
+    // tab=0 表示"全部"，不传 trimester 参数
+    this.loadRecipes(tab > 0 ? tab : null)
   },
 
   goDetail(e) {
