@@ -12,16 +12,28 @@ Page({
     this.loadRecipes()
   },
 
-  async loadRecipes(trimester) {
+  loadRecipes(trimester) {
     let url = app.globalData.baseUrl + '/recipes/list'
     if (trimester) url += '?trimester=' + trimester
     
-    try {
-      const res = await wx.request({ url, method: 'GET' })
-      this.setData({ recipes: res.data.recipes || [] })
-    } catch (e) {
-      console.error(e)
-    }
+    wx.request({
+      url: url,
+      method: 'GET',
+      success: (res) => {
+        console.log('食谱列表响应:', res)
+        if (res.statusCode === 200 && res.data) {
+          this.setData({ recipes: res.data.recipes || [] })
+        } else {
+          console.error('状态码异常:', res.statusCode)
+          this.setData({ recipes: [] })
+        }
+      },
+      fail: (err) => {
+        console.error('请求失败:', err)
+        wx.showToast({ title: '网络错误', icon: 'none' })
+        this.setData({ recipes: [] })
+      }
+    })
   },
 
   filter(e) {
