@@ -1,0 +1,147 @@
+{
+  "螃蟹": {
+    "level": "high",
+    "reason": "性寒，可能引起宫缩",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": [
+      "鱼肉",
+      "虾"
+    ]
+  },
+  "甲鱼": {
+    "level": "high",
+    "reason": "性寒，活血化瘀，早期禁忌",
+    "weeks": [
+      1,
+      12
+    ],
+    "alternatives": [
+      "鸡肉"
+    ]
+  },
+  "薏米": {
+    "level": "high",
+    "reason": "可能诱发流产",
+    "weeks": [
+      1,
+      12
+    ],
+    "alternatives": [
+      "小米",
+      "燕麦"
+    ]
+  },
+  "马齿苋": {
+    "level": "high",
+    "reason": "性寒滑利，促进宫缩",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": [
+      "菠菜",
+      "苋菜"
+    ]
+  },
+  "山楂": {
+    "level": "medium",
+    "reason": "促进宫缩，孕早期慎用",
+    "weeks": [
+      1,
+      12
+    ],
+    "alternatives": [
+      "苹果",
+      "橙子"
+    ]
+  },
+  "桂圆": {
+    "level": "medium",
+    "reason": "性热，易上火，孕早期慎用",
+    "weeks": [
+      1,
+      12
+    ],
+    "alternatives": [
+      "红枣",
+      "枸杞"
+    ]
+  },
+  "荔枝": {
+    "level": "medium",
+    "reason": "性热，糖分高",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": [
+      "苹果",
+      "梨"
+    ]
+  },
+  "木瓜": {
+    "level": "medium",
+    "reason": "含木瓜蛋白酶，孕早期慎用",
+    "weeks": [
+      1,
+      12
+    ],
+    "alternatives": [
+      "香蕉",
+      "芒果"
+    ]
+  },
+  "芦荟": {
+    "level": "medium",
+    "reason": "可能引起腹泻",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": [
+      "银耳"
+    ]
+  },
+  "西瓜": {
+    "level": "low",
+    "reason": "性寒，适量食用",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": null
+  },
+  "冷饮": {
+    "level": "low",
+    "reason": "可能刺激肠胃，适量",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": null
+  },
+  "咖啡": {
+    "level": "low",
+    "reason": "每日限200mg咖啡因",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": null
+  },
+  "浓茶": {
+    "level": "low",
+    "reason": "影响铁吸收，饭后避免",
+    "weeks": [
+      1,
+      40
+    ],
+    "alternatives": [
+      "淡绿茶",
+      "红枣茶"
+    ]
+  }
+}
