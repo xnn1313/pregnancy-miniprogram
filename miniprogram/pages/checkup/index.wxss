@@ -1,0 +1,35 @@
+/* pages/checkup/index.wxss */
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  display: block;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.date {
+  width: 140rpx;
+  font-size: 24rpx;
+  color: #999;
+  padding-top: 10rpx;
+}
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-weight: bold;
+}
+.status {
+  font-size: 24rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+}
+.status.pending {
+  background: #FFF3E0;
+  color: #FF9800;
+}

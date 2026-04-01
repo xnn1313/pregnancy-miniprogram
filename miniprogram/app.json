@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recipe/list",
+    "pages/record/index",
+    "pages/checkup/index",
+    "pages/mine/index",
+    "pages/login/login"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "孕期记录",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF6B9D",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {"pagePath": "pages/index/index", "text": "今日"},
+      {"pagePath": "pages/recipe/list", "text": "食谱"},
+      {"pagePath": "pages/record/index", "text": "记录"},
+      {"pagePath": "pages/checkup/index", "text": "产检"},
+      {"pagePath": "pages/mine/index", "text": "我的"}
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

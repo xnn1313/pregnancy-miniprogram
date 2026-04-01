@@ -1,0 +1,37 @@
+/* pages/recipe/list.wxss */
+.search-bar input {
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 16rpx;
+}
+.filter {
+  display: flex;
+  margin: 20rpx 0;
+}
+.filter-item {
+  padding: 10rpx 20rpx;
+  margin-right: 16rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  font-size: 26rpx;
+}
+.filter-item.active {
+  background: #FF6B9D;
+  color: #fff;
+}
+.name {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.tags {
+  margin-top: 12rpx;
+}
+.tag {
+  display: inline-block;
+  padding: 4rpx 12rpx;
+  margin-right: 8rpx;
+  background: #FFF0F5;
+  color: #FF6B9D;
+  border-radius: 8rpx;
+  font-size: 22rpx;
+}

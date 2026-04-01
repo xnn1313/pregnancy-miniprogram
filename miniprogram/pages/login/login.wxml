@@ -1,0 +1,10 @@
+<!--pages/login/login.wxml-->
+<view class="container login-page">
+  <view class="logo">🤰</view>
+  <text class="title">孕期记录</text>
+  <text class="subtitle">记录孕期每一天</text>
+  
+  <button class="btn-primary" open-type="getPhoneNumber" bindgetphonenumber="onGetPhoneNumber">
+    微信授权登录
+  </button>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/recipe/list.wxml-->
+<view class="container">
+  <view class="search-bar">
+    <input placeholder="搜索食谱" bindconfirm="onSearch" value="{{keyword}}" />
+  </view>
+  
+  <view class="filter">
+    <view class="filter-item {{activeTab===0?'active':''}}" bindtap="filter" data-tab="0">全部</view>
+    <view class="filter-item {{activeTab===1?'active':''}}" bindtap="filter" data-tab="1">孕早期</view>
+    <view class="filter-item {{activeTab===2?'active':''}}" bindtap="filter" data-tab="2">孕中期</view>
+    <view class="filter-item {{activeTab===3?'active':''}}" bindtap="filter" data-tab="3">孕晚期</view>
+  </view>
+
+  <view class="recipe-list">
+    <view class="recipe-card card" wx:for="{{recipes}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+      <text class="name">{{item.name}}</text>
+      <view class="tags">
+        <text class="tag" wx:for="{{item.benefits}}" wx:for-item="b" wx:key="*this">{{b}}</text>
+      </view>
+    </view>
+  </view>
+</view>

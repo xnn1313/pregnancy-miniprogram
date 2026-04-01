@@ -1,0 +1,16 @@
+<!--pages/checkup/index.wxml-->
+<view class="container">
+  <view class="section">
+    <text class="section-title">产检时间线</text>
+    
+    <view class="timeline">
+      <view class="timeline-item" wx:for="{{checkups}}" wx:key="id">
+        <view class="date">{{item.date}}</view>
+        <view class="content card">
+          <text class="title">{{item.title}}</text>
+          <text class="status {{item.status}}">{{item.status==='pending'?'待检':'已完成'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

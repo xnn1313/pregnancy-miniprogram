@@ -1,0 +1,22 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 孕周卡片 -->
+  <view class="card">
+    <view class="pregnancy-info">
+      <text class="week">孕 {{week}} 周</text>
+      <text class="stage">{{stage}}</text>
+    </view>
+    <view class="due-date">预产期：{{dueDate}}</view>
+  </view>
+
+  <!-- 今日推荐 -->
+  <view class="section">
+    <text class="section-title">今日推荐</text>
+    <view class="recipe-list">
+      <view class="recipe-item card" wx:for="{{recipes}}" wx:key="id" bindtap="goRecipe" data-id="{{item.id}}">
+        <text class="recipe-name">{{item.name}}</text>
+        <text class="recipe-benefit">{{item.benefits[0]}}</text>
+      </view>
+    </view>
+  </view>
+</view>

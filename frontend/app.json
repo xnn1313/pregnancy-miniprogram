@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recipe/list",
+    "pages/recipe/detail",
+    "pages/record/index",
+    "pages/record/chart",
+    "pages/checkup/index",
+    "pages/mine/index",
+    "pages/login/login"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "孕期记录",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF6B9D",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "今日",
+        "iconPath": "static/tab/home.png",
+        "selectedIconPath": "static/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/recipe/list",
+        "text": "食谱",
+        "iconPath": "static/tab/recipe.png",
+        "selectedIconPath": "static/tab/recipe-active.png"
+      },
+      {
+        "pagePath": "pages/record/index",
+        "text": "记录",
+        "iconPath": "static/tab/record.png",
+        "selectedIconPath": "static/tab/record-active.png"
+      },
+      {
+        "pagePath": "pages/checkup/index",
+        "text": "产检",
+        "iconPath": "static/tab/checkup.png",
+        "selectedIconPath": "static/tab/checkup-active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/tab/mine.png",
+        "selectedIconPath": "static/tab/mine-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

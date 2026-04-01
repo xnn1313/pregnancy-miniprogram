@@ -1,0 +1,29 @@
+<!--pages/record/index.wxml-->
+<view class="container">
+  <view class="date">{{today}}</view>
+  
+  <view class="record-item card">
+    <text class="label">体重 (kg)</text>
+    <input type="digit" placeholder="请输入" value="{{weight}}" bindinput="onWeight" />
+  </view>
+
+  <view class="record-item card">
+    <text class="label">症状</text>
+    <view class="symptom-list">
+      <view class="symptom {{symptoms.indexOf(s)>-1?'active':''}}" 
+            wx:for="{{symptomOptions}}" wx:for-item="s" wx:key="*this"
+            bindtap="toggleSymptom" data-symptom="{{s}}">{{s}}</view>
+    </view>
+  </view>
+
+  <view class="record-item card">
+    <text class="label">今日心情</text>
+    <view class="mood-list">
+      <view class="mood {{mood===m.value?'active':''}}" 
+            wx:for="{{moods}}" wx:for-item="m" wx:key="value"
+            bindtap="setMood" data-mood="{{m.value}}">{{m.emoji}}</view>
+    </view>
+  </view>
+
+  <button class="btn-primary" bindtap="save">保存记录</button>
+</view>
