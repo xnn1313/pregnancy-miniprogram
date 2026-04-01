@@ -13,16 +13,23 @@ Page({
     this.loadRecipes()
   },
 
-  async loadRecipes() {
-    try {
-      const res = await wx.request({
-        url: app.globalData.baseUrl + '/recipes/list?page_size=3',
-        method: 'GET'
-      })
-      this.setData({ recipes: res.data.recipes || [] })
-    } catch (e) {
-      console.error('加载失败', e)
-    }
+  loadRecipes() {
+    wx.request({
+      url: app.globalData.baseUrl + '/recipes/list?page_size=3',
+      method: 'GET',
+      success: (res) => {
+        console.log('API响应:', res)
+        if (res.statusCode === 200 && res.data) {
+          this.setData({ recipes: res.data.recipes || [] })
+        } else {
+          console.error('状态码异常:', res.statusCode)
+        }
+      },
+      fail: (err) => {
+        console.error('请求失败:', err)
+        wx.showToast({ title: '网络错误', icon: 'none' })
+      }
+    })
   },
 
   goRecipe(e) {
