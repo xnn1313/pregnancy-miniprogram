@@ -1,5 +1,6 @@
 // API 请求封装
-const BASE_URL = 'http://localhost:8000/api/v1'
+// 开发环境使用本地地址，生产环境使用实际服务器地址
+const BASE_URL = 'http://localhost:8088/api/v1'
 
 // 请求拦截
 function request(options) {
