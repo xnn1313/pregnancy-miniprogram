@@ -1,0 +1,142 @@
+/* pages/recipe/detail.wxss */
+.header {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FFB6C1 100%);
+  padding: 40rpx;
+  color: white;
+  border-radius: 0 0 30rpx 30rpx;
+}
+.name {
+  font-size: 40rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 16rpx;
+}
+.meta text {
+  margin-right: 20rpx;
+  opacity: 0.9;
+}
+.section {
+  padding: 30rpx;
+  background: white;
+  margin: 20rpx;
+  border-radius: 20rpx;
+}
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  background: #FFF0F5;
+  color: #FF6B9D;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+  font-size: 26rpx;
+}
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+}
+.nut-item {
+  text-align: center;
+  padding: 20rpx;
+  background: #f8f8f8;
+  border-radius: 16rpx;
+}
+.nut-value {
+  display: block;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FF6B9D;
+}
+.nut-name {
+  font-size: 24rpx;
+  color: #666;
+}
+.ingredient-list {
+  background: #f8f8f8;
+  border-radius: 16rpx;
+  padding: 20rpx;
+}
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+.ingredient:last-child {
+  border-bottom: none;
+}
+.ing-name {
+  color: #333;
+}
+.ing-amount {
+  color: #999;
+}
+.steps {
+  padding-left: 20rpx;
+}
+.step {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.step-num {
+  width: 50rpx;
+  height: 50rpx;
+  background: #FF6B9D;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+.step-text {
+  flex: 1;
+  line-height: 50rpx;
+}
+.warning {
+  margin: 20rpx;
+  padding: 20rpx;
+  background: #FFF3E0;
+  border-radius: 16rpx;
+  color: #E65100;
+  font-size: 26rpx;
+}
+.warning-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 20rpx;
+  background: white;
+  box-shadow: 0 -2rpx 10rpx rgba(0,0,0,0.1);
+}
+.btn-done {
+  flex: 1;
+  background: #FF6B9D;
+  color: white;
+  margin-right: 20rpx;
+  border-radius: 40rpx;
+}
+.btn-fav {
+  flex: 1;
+  background: white;
+  color: #FF6B9D;
+  border: 2rpx solid #FF6B9D;
+  border-radius: 40rpx;
+}

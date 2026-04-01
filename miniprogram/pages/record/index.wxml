@@ -2,13 +2,15 @@
 <view class="container">
   <view class="date">{{today}}</view>
   
-  <view class="record-item card">
+  <!-- 体重 -->
+  <view class="card">
     <text class="label">体重 (kg)</text>
-    <input type="digit" placeholder="请输入" value="{{weight}}" bindinput="onWeight" />
+    <input class="weight-input" type="digit" placeholder="请输入" value="{{weight}}" bindinput="onWeight" />
   </view>
 
-  <view class="record-item card">
-    <text class="label">症状</text>
+  <!-- 症状 -->
+  <view class="card">
+    <text class="label">今日症状</text>
     <view class="symptom-list">
       <view class="symptom {{symptoms.indexOf(s)>-1?'active':''}}" 
             wx:for="{{symptomOptions}}" wx:for-item="s" wx:key="*this"
@@ -16,7 +18,8 @@
     </view>
   </view>
 
-  <view class="record-item card">
+  <!-- 心情 -->
+  <view class="card">
     <text class="label">今日心情</text>
     <view class="mood-list">
       <view class="mood {{mood===m.value?'active':''}}" 
@@ -25,5 +28,7 @@
     </view>
   </view>
 
-  <button class="btn-primary" bindtap="save">保存记录</button>
+  <!-- 操作按钮 -->
+  <button class="btn-save" bindtap="save">保存记录</button>
+  <button class="btn-chart" bindtap="goChart">查看体重趋势</button>
 </view>

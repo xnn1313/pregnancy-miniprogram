@@ -1,4 +1,6 @@
 // pages/record/index.js
+const app = getApp()
+
 Page({
   data: {
     today: '',
@@ -11,13 +13,31 @@ Page({
       {value: 'good', emoji: '🙂'},
       {value: 'normal', emoji: '😐'},
       {value: 'bad', emoji: '😔'}
-    ]
+    ],
+    saved: false
   },
 
   onLoad() {
     const d = new Date()
     this.setData({
-      today: `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`
+      today: `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`
+    })
+    this.loadTodayRecord()
+  },
+
+  loadTodayRecord() {
+    wx.request({
+      url: app.globalData.baseUrl + '/record/today',
+      method: 'GET',
+      success: (res) => {
+        if (res.statusCode === 200 && res.data) {
+          this.setData({
+            weight: res.data.weight || '',
+            symptoms: res.data.symptoms || [],
+            mood: res.data.mood || 'good'
+          })
+        }
+      }
     })
   },
 
@@ -27,7 +47,7 @@ Page({
 
   toggleSymptom(e) {
     const s = e.currentTarget.dataset.symptom
-    const symptoms = [...this.data.symptoms]
+    let symptoms = [...this.data.symptoms]
     const idx = symptoms.indexOf(s)
     if (idx > -1) {
       symptoms.splice(idx, 1)
@@ -42,6 +62,32 @@ Page({
   },
 
   save() {
-    wx.showToast({ title: '保存成功', icon: 'success' })
+    const data = {
+      weight: parseFloat(this.data.weight) || 0,
+      symptoms: this.data.symptoms,
+      mood: this.data.mood,
+      date: new Date().toISOString().split('T')[0]
+    }
+
+    wx.request({
+      url: app.globalData.baseUrl + '/record/',
+      method: 'POST',
+      data: data,
+      success: (res) => {
+        if (res.statusCode === 200) {
+          wx.showToast({ title: '保存成功', icon: 'success' })
+          this.setData({ saved: true })
+        } else {
+          wx.showToast({ title: '保存失败', icon: 'none' })
+        }
+      },
+      fail: () => {
+        wx.showToast({ title: '网络错误', icon: 'none' })
+      }
+    })
+  },
+
+  goChart() {
+    wx.navigateTo({ url: '/pages/record/chart' })
   }
 })

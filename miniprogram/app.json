@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/recipe/list",
+    "pages/recipe/detail",
     "pages/record/index",
+    "pages/record/chart",
     "pages/checkup/index",
     "pages/mine/index",
     "pages/login/login"
